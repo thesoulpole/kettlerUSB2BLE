@@ -44,7 +44,7 @@
 	 
       </style>
       <script type="text/javascript">
-         var socket = io.connect("192.168.1.36:3000");
+         var socket = io.connect("192.168.0.59:3000");
          socket.on('speed', function (data) {  
 			$('#speed').html(data);
          });
@@ -108,7 +108,7 @@
 				<div class="numbers" id="power">0</div>   
 			</td>
 			<td>
-				<div class="BoldH" >Vent</div>
+				<div class="BoldH" >Wind</div>
 				<div class="numbers" id="windspeed">0</div>  
 			</td>
 		  </tr>
@@ -133,7 +133,7 @@
 			  <button data-value="pause" class="key">Pause</button>
 			</td>
 			<td>
-				<div class="BoldH">Pente</div>
+				<div class="BoldH">Incline</div>
 				<div class="numbers" id="grade">0%</div>   
 			</td>
 		  </tr>
