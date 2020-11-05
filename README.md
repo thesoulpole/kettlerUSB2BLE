@@ -48,8 +48,8 @@ sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 ### KettlerUSB2BLE
 * download the sources
 ```
-git clone https://github.com/360manu/kettlerUSB2BLE.git
-cd kettlerUSB2BLE
+git clone https://github.com/thesoulpole/kettlerUSB2BLE_PS.git
+cd kettlerUSB2BLE_PS
 ```
 
 * Install
@@ -98,9 +98,9 @@ It's also possible to switch gears.
 ### Running as a service
 For an automatic launch with the raspberry 
 ```
-sudo systemctl link /home/pi/kettlerUSB2BLE/kettler.service
+sudo systemctl link /home/pi/kettlerUSB2BLE_PS/kettler.service
 ```
--> Created symlink /etc/systemd/system/kettler.service → /home/pi/kettlerUSB2BLE/kettler.service.
+-> Created symlink /etc/systemd/system/kettler.service → /home/pi/kettlerUSB2BLE_PS/kettler.service.
 
 ```
 sudo systemctl enable kettler.service
