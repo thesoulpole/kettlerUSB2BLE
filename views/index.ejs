@@ -51,6 +51,9 @@
          });
 		 socket.on('hr', function (data) {  
 			$('#heartrate').html(data);
+		});
+			socket.on('rpm', function (data) {  
+			$('#cadence').html(data);
          });
 		 socket.on('power', function (data) {  
 			$('#power').html(data);
@@ -116,7 +119,7 @@
 		  <tr>
 			<td> 
 				<div class="BoldH">CADENCE</div>
-				<div class="numbers" id="speed">0</div>  
+				<div class="numbers" id="cadence">0</div>  
 			</td>
 			<td>
 			  <div class="BoldH">HeartRt</div>
