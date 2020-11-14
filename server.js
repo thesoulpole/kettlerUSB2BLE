@@ -94,7 +94,6 @@ bikeState.setGear(4);
 //io.emit('gear', gear); PS: this my addition causes an error - because gear is not defined!
 
 
-
 //--- Serial port
 var kettlerUSB = new kettlerUSB();
 kettlerUSB.on('error', (string) => {
