@@ -89,6 +89,7 @@ bikeState.on('simpower', (simpower) => {
 });
 // first state
 bikeState.setGear(4);
+io.emit('gear', gear);
 
 //--- Serial port
 var kettlerUSB = new kettlerUSB();
