@@ -52,7 +52,7 @@ io.on('connection', (socket) => {
 			break;
 		}
 	});
-	socket.emit('key', 'GearDn');
+	socket.emit('key', 'GearDn'); //this should force the display of a initial gear
 });
 
 //--- Buttons
