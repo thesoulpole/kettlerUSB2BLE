@@ -94,6 +94,7 @@ bikeState.setGear(4);
 socket.emit('key', 'GearDn');
 
 
+
 //--- Serial port
 var kettlerUSB = new kettlerUSB();
 kettlerUSB.on('error', (string) => {
