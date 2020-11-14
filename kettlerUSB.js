@@ -25,7 +25,7 @@ class kettlerUSB extends EventEmitter {
 		//start at -1
 		this.writePower = false;
 		this.power = -1;
-		//msg, writePower and powr are declared HERE!
+		//PS_comment: msg, writePower and powr are declared HERE!
 	};
 
 	directWrite(data) {
@@ -106,7 +106,7 @@ class kettlerUSB extends EventEmitter {
 				dataOut.rpm = rpm;
 			}
 
-			if (Object.keys(data).length > 0)
+			if (Object.keys(dataOut).length > 0)
 				this.emit('data', dataOut);
 		}
 		//                command: es 1
