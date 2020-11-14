@@ -91,6 +91,8 @@ bikeState.on('simpower', (simpower) => {
 bikeState.setGear(4);
 
 //io.emit('gear', gear); PS: this my addition causes an error - because gear is not defined!
+socket.emit('key', 'GearDn');
+
 
 
 //--- Serial port
