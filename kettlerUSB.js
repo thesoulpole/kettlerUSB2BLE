@@ -99,6 +99,8 @@ class kettlerUSB extends EventEmitter {
 			}
 
 			// rpm
+			// ---- this is a DUPLICTAE of the CADENCE section!! BUT - we are setting a 
+			// ---- new, REDUNDANT field in dataOut (rpm) !!
 			var rpm = parseInt(states[1]);
 			if (!isNaN(rpm)) {
 				dataOut.rpm = rpm;
