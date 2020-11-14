@@ -52,8 +52,8 @@ io.on('connection', (socket) => {
 			break;
 		}
 	});
-	console.log('browser connecting to web server');
-	socket.emit('key', 'GearDn'); //this should force the display of a initial gear
+	// console.log('browser connecting to web server');
+	// socket.emit('key', 'GearDn'); //this should force the display of a initial gear
 });
 
 //--- Buttons
