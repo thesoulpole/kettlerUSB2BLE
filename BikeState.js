@@ -1,6 +1,6 @@
 
 const EventEmitter = require('events');
-var DEBUG = false;
+var DEBUG = true;
 
 var minGear = 1;
 var maxGear = 10;
