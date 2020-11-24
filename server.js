@@ -53,7 +53,7 @@ io.on('connection', (socket) => {
 		}
 	});
 	// console.log('browser connecting to web server');
-	// socket.emit('key', 'GearDn'); //this should force the display of a initial gear
+	// socket.emit('key', 'GearDn'); //PS: this should force the display of a initial gear, but doesn't. Why?
 });
 
 //--- Buttons
@@ -92,7 +92,7 @@ bikeState.on('simpower', (simpower) => {
 // first state
 bikeState.setGear(4);
 
-//io.emit('gear', gear); PS: this my addition causes an error - because gear is not defined!
+//io.emit('gear', gear); PS: this is my addition, but it causes an error - because gear is not defined!
 
 
 //--- Serial port
