@@ -2,7 +2,7 @@ var $q = require('q');
 var EventEmitter = require('events').EventEmitter;
 var SerialPort = require('serialport');
 var DEBUG = true;
-var MOCKDEBUG = false;
+var MOCKDEBUG = true;
 
 const Readline = SerialPort.parsers.Readline;
 const EOL = '\r\n'; // CRLF
