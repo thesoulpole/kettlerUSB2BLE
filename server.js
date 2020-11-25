@@ -12,7 +12,7 @@ console.log = function () {
 	t.write(util.format.apply(this, arguments) + '\n');
 };*/
 
-/*  */
+
 var DEBUG = false;
 var express = require('express');
 var kettlerUSB = require('./kettlerUSB');
@@ -25,9 +25,9 @@ var Button = require('./lib/rpi_gpio_buttons');
 const app = express();
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-app.get('/', function (req, res) {
+/* app.get('/', function (req, res) {
 	res.render('index');
-});
+});*/
 app.get('/control', function (req, res) {
 		res.render('control');
 });
