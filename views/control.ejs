@@ -74,16 +74,16 @@
 		 socket.on('mode', function (data) {  
 			if (data==='ERG')
 			{
-				$('#keyLeft').attr("data-value", "PowerDn");
+				$('#keyLeft').attr("data-value", "Revs_DOWN");
 				$('#keyLeft').html("Power Dn");
-				$('#keyRight').attr("data-value", "PowerUp");
+				$('#keyRight').attr("data-value", "Revs_UP");
 				$('#keyRight').html("Power Up");
 			}
 			else
 			{
-				$('#keyLeft').attr("data-value", "GearDn");
+				$('#keyLeft').attr("data-value", "RevsDn");
 				$('#keyLeft').html( "Gear Dn");
-				$('#keyRight').attr("data-value", "GearUp");
+				$('#keyRight').attr("data-value", "RevsUp");
 				$('#keyRight').html( "Gear Up");
 			}
          });
