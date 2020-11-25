@@ -25,9 +25,9 @@ var Button = require('./lib/rpi_gpio_buttons');
 const app = express();
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-/* app.get('/', function (req, res) {
+app.get('/', function (req, res) {
 	res.render('index');
-});*/
+});
 app.get('/views', function (req, res) {
 		res.render('control');
 });
