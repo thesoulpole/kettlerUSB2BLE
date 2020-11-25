@@ -12,6 +12,7 @@ console.log = function () {
 	t.write(util.format.apply(this, arguments) + '\n');
 };*/
 
+/*  */
 var DEBUG = false;
 var express = require('express');
 var kettlerUSB = require('./kettlerUSB');

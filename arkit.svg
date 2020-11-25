@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="219px" preserveAspectRatio="none" style="width:1155px;height:219px;" version="1.1" viewBox="0 0 1155 219" width="1155px" zoomAndPan="magnify"><defs/><g><ellipse cx="567.6838" cy="47.242" fill="#F8F8F8" rx="41.1838" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="540.6838" y="50.9842">BikeState</text><ellipse cx="137.6992" cy="179.7398" fill="#F8F8F8" rx="131.6992" ry="28.7398" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="247" x="14.1992" y="183.482">cycling-power-measurement-characteristic</text><ellipse cx="366.6652" cy="106.533" fill="#F8F8F8" rx="75.6652" ry="17.533" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="126" x="303.6652" y="110.2752">cycling-power-service</text><ellipse cx="574.2951" cy="179.459" fill="#F8F8F8" rx="110.2951" ry="24.459" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="202" x="473.2951" y="183.2012">fitness-control-point-characteristic</text><ellipse cx="815.383" cy="179.3766" fill="#F8F8F8" rx="117.383" ry="25.8766" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="217" x="706.883" y="183.1188">fitness-machine-status-characteristic</text><ellipse cx="574.4117" cy="106.742" fill="#F8F8F8" rx="53.9117" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="72" x="538.4117" y="110.4842">ftms-service</text><ellipse cx="1045.5845" cy="179.7169" fill="#F8F8F8" rx="99.0845" ry="22.2169" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="178" x="956.5845" y="183.4591">indoor-bike-data-characteristic</text><ellipse cx="470.598" cy="47.242" fill="#F8F8F8" rx="42.598" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="442.598" y="50.9842">kettlerBLE</text><ellipse cx="370.7193" cy="47.242" fill="#F8F8F8" rx="44.7193" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="341.2193" y="50.9842">kettlerUSB</text><ellipse cx="666.7193" cy="47.242" fill="#F8F8F8" rx="44.7193" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="59" x="637.2193" y="50.9842">OledInfo</text><ellipse cx="249.5267" cy="47.1053" fill="#F8F8F8" rx="63.5267" ry="15.1053" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="201.0267" y="50.8475">rpi_gpio_buttons</text><ellipse cx="140.4914" cy="47.242" fill="#F8F8F8" rx="31.9914" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="41" x="119.9914" y="50.9842">server</text><ellipse cx="366.54" cy="179.708" fill="#F8F8F8" rx="84.04" ry="19.208" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="145" x="294.04" y="183.4502">static-read-characteristic</text><!--MD5=[fbfa41a8456d4d700a1b8b3a49714da5]
+link cycling-power-service to cycling-power-measurement-characteristic--><path d="M323.158,120.938 C292.878,130.3259 251.6,143.1241 215.653,154.2691 " fill="none" id="cycling-power-service-&gt;cycling-power-measurement-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="210.845,155.7598,220.6257,156.9164,215.6209,154.2797,218.2576,149.2749,210.845,155.7598" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[054cd17d45df7b5b802e093f90178247]
+link cycling-power-service to static-read-characteristic--><path d="M366.5,124.326 C366.5,133.5449 366.5,145.1126 366.5,155.1891 " fill="none" id="cycling-power-service-&gt;static-read-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="366.5,160.3022,370.5,151.3022,366.5,155.3022,362.5,151.3022,366.5,160.3022" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8749a079a4fa4430bffe4ee575835135]
+link ftms-service to fitness-control-point-characteristic--><path d="M574.5,119.5442 C574.5,127.8402 574.5,139.2295 574.5,149.787 " fill="none" id="ftms-service-&gt;fitness-control-point-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="574.5,154.8858,578.5,145.8858,574.5,149.8858,570.5,145.8858,574.5,154.8858" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[93ba45c6c6ec3cb8a704eeb9dcf72703]
+link ftms-service to fitness-machine-status-characteristic--><path d="M607.002,117.0754 C641.465,127.2282 697.041,143.6013 742.151,156.8909 " fill="none" id="ftms-service-&gt;fitness-machine-status-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="747.038,158.3308,739.5351,151.9506,742.2418,156.9179,737.2745,159.6246,747.038,158.3308" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[9686425a728e5baf2b3c1055f5ff42ac]
+link ftms-service to indoor-bike-data-characteristic--><path d="M624.714,111.3212 C695.386,117.189 828.028,129.9973 939.5,151 C953.228,153.5865 967.808,156.9537 981.619,160.4403 " fill="none" id="ftms-service-&gt;indoor-bike-data-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="986.67,161.729,978.9378,155.6288,981.8251,160.4933,976.9606,163.3806,986.67,161.729" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[5ec8f4a806d8ecdbd0375e288c96e1b3]
+link ftms-service to static-read-characteristic--><path d="M545.14,117.522 C511.566,128.9823 456.057,147.9299 415.815,161.6665 " fill="none" id="ftms-service-&gt;static-read-characteristic" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="410.986,163.315,420.7957,164.1923,415.7178,161.6994,418.2107,156.6214,410.986,163.315" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[280331f653daab898da7296cfa4719f5]
+link kettlerBLE to cycling-power-service--><path d="M450.938,58.815 C436.309,66.904 415.977,78.145 398.93,87.57 " fill="none" id="kettlerBLE-&gt;cycling-power-service" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="394.216,90.176,404.0276,89.3206,398.5914,87.7562,400.1559,82.3199,394.216,90.176" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[b34f0ebe50a4a7b7bf78e573670aabbd]
+link kettlerBLE to ftms-service--><path d="M490.062,58.815 C506.986,68.172 531.542,81.749 549.815,91.852 " fill="none" id="kettlerBLE-&gt;ftms-service" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="554.317,94.341,548.3771,86.4849,549.9416,91.9212,544.5054,93.4856,554.317,94.341" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[212695f759772ca4b7d0b1d6878c6eae]
+link <b>server</b> to BikeState--><path d="M154.65,35.221 C163.158,28.92 174.533,21.795 186,18.5 C220.92,8.466 477.716,9.831 513,18.5 C524.406,21.302 536.072,26.958 545.669,32.498 " fill="none" id="&lt;b&gt;server&lt;/b&gt;-&gt;BikeState" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="550.204,35.196,544.5154,27.1561,545.9072,32.6391,540.4243,34.031,550.204,35.196" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[9f62a0125e9806c30e249f81fe3d4ead]
+link <b>server</b> to kettlerBLE--><path d="M154.65,35.221 C163.158,28.92 174.533,21.795 186,18.5 C234.91,4.447 365.536,6.542 415,18.5 C426.4,21.256 438.086,26.779 447.776,32.236 " fill="none" id="&lt;b&gt;server&lt;/b&gt;-&gt;kettlerBLE" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="452.362,34.897,446.5851,26.9203,448.0373,32.3876,442.57,33.8398,452.362,34.897" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[5092991f1424c267d3d14d1622ccf1ae]
+link <b>server</b> to kettlerUSB--><path d="M154.65,35.221 C163.158,28.92 174.533,21.795 186,18.5 C240.249,2.912 258.043,5.627 313,18.5 C324.947,21.298 337.257,26.964 347.406,32.511 " fill="none" id="&lt;b&gt;server&lt;/b&gt;-&gt;kettlerUSB" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="351.908,35.041,346.0206,27.1456,347.5488,32.5921,342.1023,34.1203,351.908,35.041" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[1399cad7fd07b9931866729f4291c8b6]
+link <b>server</b> to rpi_gpio_buttons--><path d="M172.859,47 C175.407,47 177.955,47 180.503,47 " fill="none" id="&lt;b&gt;server&lt;/b&gt;-&gt;rpi_gpio_buttons" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="185.733,47,176.733,43,180.733,47,176.733,51,185.733,47" style="stroke: #000000; stroke-width: 1.0;"/><script type="text/plantuml"><![CDATA[MD5=[76b4df54edb4e4e5fcba2a0a9d40a314]
+@startuml
+
+scale max 1920 width
+top to bottom direction
+
+skinparam nodesep 13
+skinparam ranksep 27
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(BikeState)
+(cycling-power-measurement-characteristic)
+(cycling-power-service)
+(fitness-control-point-characteristic)
+(fitness-machine-status-characteristic)
+(ftms-service)
+(indoor-bike-data-characteristic)
+(kettlerBLE)
+(kettlerUSB)
+(<b>OledInfo</b>)
+(rpi_gpio_buttons)
+(<b>server</b>)
+(static-read-characteristic)
+
+
+(cycling-power-service) --> (cycling-power-measurement-characteristic)
+(cycling-power-service) --> (static-read-characteristic)
+(ftms-service) --> (fitness-control-point-characteristic)
+(ftms-service) --> (fitness-machine-status-characteristic)
+(ftms-service) --> (indoor-bike-data-characteristic)
+(ftms-service) --> (static-read-characteristic)
+(kettlerBLE) --> (cycling-power-service)
+(kettlerBLE) --> (ftms-service)
+(<b>server</b>) -[thickness=1]> (BikeState)
+(<b>server</b>) -[thickness=1]> (kettlerBLE)
+(<b>server</b>) -[thickness=1]> (kettlerUSB)
+(<b>server</b>) -[thickness=1]> (rpi_gpio_buttons)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>
