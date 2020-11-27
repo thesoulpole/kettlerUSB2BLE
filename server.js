@@ -194,7 +194,8 @@ bikeState.on('simpower', (simpower) => {
 var dataFake = {
 	rpm: 80, //+ 20 * (Math.random() - 0.5),
 	speed: 20,
-	power: 100
+	power: 100,
+	hr: 88 //PS:added hr
 };
 function mafonction() {
 	kettlerUSB.emit('data', dataFake);
@@ -202,7 +203,8 @@ function mafonction() {
 	dataFake = {
 		rpm: 80 + 20 * (Math.random() - 0.5),
 		speed: 20,
-		power: 100
+		power: 100,
+		hr: 77 //PS:added hr
 	};
 };
 function mafonction2() {
