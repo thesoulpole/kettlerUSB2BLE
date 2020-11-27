@@ -114,6 +114,7 @@ class BikeState extends EventEmitter {
 			console.log('[BikeState.js] - SIM pente: ', this.external.grade);
 			console.log('[BikeState.js] - SIM gear : ', this.gear);
 			console.log('[BikeState.js] - SIM calculated power: ', simpower);
+			console.log('[BikeState.js] - SIM heart rate: ', this.hr);
 		}
 
 		this.emit('simpower', simpower);
