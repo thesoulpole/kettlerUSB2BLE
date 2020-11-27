@@ -1,6 +1,6 @@
-const bleno = require("bleno");
+const bleno = require("@abandonware/blenobleno");
 
-const UUID = „69d9fdd724fa4987aa3f43b5f4cabcbf”; // set your own value
+const UUID = 'd9fdd724fa4987aa3f43b5f4cabcbf'; // set your own value
 const MINOR = 2; // set your own value
 const MAJOR = 1; // set your own value
 const TX_POWER = -60; // just declare transmit power in dBm
@@ -10,7 +10,7 @@ console.log("starting BLEno...")
 bleno.on('stateChange' , state => {
     if (state==='poweredOn') {
         console.log('start advertising...');
-        bleno.startAdvertisingIBeaconif(err) {
+        bleno.startAdvertisingIBeaconif(UUID, MAJOR, MINOR, TX_POWER, err => {
             if(err) {
                 console.error(err);
             } else {
@@ -19,7 +19,7 @@ bleno.on('stateChange' , state => {
             }
         });
     } else {
-        console.log(„Stopping broadcast...”);
+        console.log('Stopping broadcast...');
         bleno.stopAdvertising();
     }
 })
