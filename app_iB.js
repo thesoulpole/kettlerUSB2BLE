@@ -10,7 +10,7 @@ console.log("starting BLEno...")
 bleno.on('stateChange' , state => {
     if (state==='poweredOn') {
         console.log('start advertising...');
-        bleno.startAdvertisingIBeaconif(UUID, MAJOR, MINOR, TX_POWER, err => {
+        bleno.startAdvertisingIBeacon (UUID, MAJOR, MINOR, TX_POWER, err => {
             if(err) {
                 console.error(err);
             } else {
