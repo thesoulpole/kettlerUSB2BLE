@@ -206,6 +206,7 @@ function mafonction() {
 		power: 100,
 		hr: 77 //PS:added hr
 	};
+	console.log('[dataFake generator] hr: ' dataFake.hr);
 };
 function mafonction2() {
 	var grade = 3; //20 * (Math.random() - 0.5);
