@@ -1,6 +1,6 @@
 
 var Bleno = require('@abandonware/bleno');
-var DEBUG = false; //PS:chged to true 
+var DEBUG = true; //PS:chged to true 
 
 // Spec
 // Control point op code

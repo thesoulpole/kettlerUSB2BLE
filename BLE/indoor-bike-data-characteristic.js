@@ -1,5 +1,5 @@
 var Bleno = require('@abandonware/bleno');
-var DEBUG = false; //PS: I changed this to true, to see what data is reaching this point
+var DEBUG = true; //PS: I changed this to true, to see what data is reaching this point
 
 class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 
