@@ -1,4 +1,4 @@
-const bleno = require("@abandonware/blenobleno");
+const bleno = require('@abandonware/bleno');
 
 const UUID = 'd9fdd724fa4987aa3f43b5f4cabcbf'; // set your own value
 const MINOR = 2; // set your own value
