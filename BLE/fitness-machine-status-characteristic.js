@@ -24,6 +24,7 @@ var StatusOpCode = {
 }
 
 class FitnessMachineStatusCharacteristic extends Bleno.Characteristic {
+
   constructor () {
     super({
       uuid: '2ADA',
@@ -38,19 +39,19 @@ class FitnessMachineStatusCharacteristic extends Bleno.Characteristic {
       ]
     })
     this._updateValueCallback = null
-  }
+  };
 
   onSubscribe (maxValueSize, updateValueCallback) {
-    if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - client subscribed')
-    this._updateValueCallback = updateValueCallback
-    return this.RESULT_SUCCESS
-  }
+    if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - client subscribed');
+    this._updateValueCallback = updateValueCallback;
+    return this.RESULT_SUCCESS;
+  };
 
   onUnsubscribe () {
     if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - client unsubscribed')
     this._updateValueCallback = null
     return this.RESULT_UNLIKELY_ERROR
-  }
+  };
 
   notify (event) {
     if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - notify')
@@ -64,7 +65,7 @@ class FitnessMachineStatusCharacteristic extends Bleno.Characteristic {
       if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - nobody is listening')
     }
     return this.RESULT_SUCCESS
-  }
+  };
 }
 
 module.exports = FitnessMachineStatusCharacteristic
