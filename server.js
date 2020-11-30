@@ -183,11 +183,11 @@ function serverCallback(message, ...args) {
 };
 
 /**** TEST ***/
-
+/*
 setInterval(mafonction, 2000);
 setInterval(mafonction2, 4000);
 //oled.setStatus(1);
-/*
+
 bikeState.on('simpower', (simpower) => {
 	dataFake.power = simpower;
 });
