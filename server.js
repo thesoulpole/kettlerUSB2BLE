@@ -187,7 +187,7 @@ function serverCallback(message, ...args) {
 setInterval(mafonction, 2000);
 setInterval(mafonction2, 4000);
 //oled.setStatus(1);
-
+/*
 bikeState.on('simpower', (simpower) => {
 	dataFake.power = simpower;
 });
@@ -212,4 +212,4 @@ function mafonction2() {
 	var grade = 3; //20 * (Math.random() - 0.5);
 	bikeState.setExternalCondition(0, grade, 0.005, 0.39);
 };
-
+*/
