@@ -100,7 +100,7 @@ class kettlerUSB extends EventEmitter {
 
 			// rpm
 			// ---- this is a DUPLICTAE of the CADENCE section!! BUT - we are setting a 
-			// ---- new, REDUNDANT field in dataOut (rpm) !!
+			// ---- new, (REDUNDANT!) field in dataOut (called 'rpm') !!
 			var rpm = parseInt(states[1]);
 			if (!isNaN(rpm)) {
 				dataOut.rpm = rpm;
@@ -112,6 +112,7 @@ class kettlerUSB extends EventEmitter {
 		//                command: es 1
 		// Le dernier chiffre semble etre une touche
 		//response: 00      0       0       175
+		// PS: what is this below all about?? 
 		else if (states.length == 4) {
 			// key
 			var key = parseInt(states[3]);
@@ -179,7 +180,8 @@ class kettlerUSB extends EventEmitter {
 		setTimeout(() => this.init(), 150);
 	};
 
-	// require state from the bike
+	// require state from the bike AND ALSO set a new power setting 
+	// on the bike IF a new power setting has appeared  
 	askState() {
 		if (this.writePower) {
 			this.directWrite("PW" + this.power.toString());

@@ -19,7 +19,7 @@ var kettlerUSB = require('./kettlerUSB');
 var KettlerBLE = require('./BLE/kettlerBLE');
 var BikeState = require('./BikeState');
 //var Oled = require('./OledInfo');
-var Button = require('./lib/rpi_gpio_buttons');
+// var Button = require('./lib/rpi_gpio_buttons');
 
 //--- Web Server on port 3000 for inspecting the Kettler State
 const app = express();
@@ -61,6 +61,7 @@ io.on('connection', (socket) => {
 });
 
 //--- Buttons
+/*
 var button = new Button(7);
 button.on('clicked', function () {
 	bikeState.GearUp();
@@ -69,7 +70,8 @@ button.on('clicked', function () {
 button.on('clicked', function () {
 	bikeState.GearDown();
 });
- 
+*/
+
 //--- Oled Screen
 //var oled = new Oled();
 
@@ -96,7 +98,7 @@ bikeState.on('simpower', (simpower) => {
 // first state
 bikeState.setGear(4);
 
-//io.emit('gear', gear); PS: this is my addition, but it causes an error - because gear is not defined!
+io.emit('gear', 4); //PS: this is my addition, but it causes an error - because gear is not defined!
 
 
 //--- Serial port
@@ -105,12 +107,15 @@ kettlerUSB.on('error', (string) => {
 	console.log('error : ' + string);
 	io.emit('error', string);
 });
+
+/* PS: inactive code, as there is no oled display.
 kettlerUSB.on('connecting', () => {
 	//oled.displayUSB('connecting');
 });
 kettlerUSB.on('start', () => {
 	//oled.displayUSB('connected');
 });
+*/
 kettlerUSB.on('data', (data) => {
 	// keep
 	bikeState.setData(data);
