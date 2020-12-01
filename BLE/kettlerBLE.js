@@ -1,6 +1,7 @@
 const bleno = require('@abandonware/bleno');
 const EventEmitter = require('events');
 const CyclingPowerService = require('./cycling-power-service');
+const HeartRateService = require('./heart-rate-service');
 const FitnessMachineService = require('./ftms-service');
 
 class KettlerBLE extends EventEmitter {
@@ -12,6 +13,7 @@ class KettlerBLE extends EventEmitter {
 		process.env['BLENO_DEVICE_NAME'] = this.name; 
 
 		this.csp = new CyclingPowerService();
+		this.hrs = new HeartRateService();
 		this.ftms = new FitnessMachineService(serverCallback); 
 
 		let self = this;
@@ -75,6 +77,7 @@ class KettlerBLE extends EventEmitter {
 	// notifiy BLE services
 	notifyFTMS(event) {
 		this.csp.notify(event);
+		this.hrs.notify(event);
 		this.ftms.notify(event);
 	};
 	
