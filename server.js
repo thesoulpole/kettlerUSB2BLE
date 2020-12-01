@@ -97,8 +97,8 @@ bikeState.on('simpower', (simpower) => {
 });
 // first state
 bikeState.setGear(4);
-
-io.emit('gear', 4); //PS: this is my addition, but it causes an error - because gear is not defined!
+bikeState.emit('gear',4);
+//io.emit('gear', 4); //PS: this is my addition, but it causes an error - because gear is not defined!
 
 
 //--- Serial port
