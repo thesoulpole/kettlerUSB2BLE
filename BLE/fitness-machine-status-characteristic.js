@@ -32,12 +32,12 @@ class FitnessMachineStatusCharacteristic extends Bleno.Characteristic {
       properties: ['notify'],
       descriptors: [
         new Bleno.Descriptor({
-					uuid: '2901',
+					uuid: '2909',
 					value: 'FitMach Status'
 				}),
         new Bleno.Descriptor({
           // Client Characteristic Configuration
-          uuid: '2902',
+          uuid: '2910',
           value: Buffer.alloc(2)
         })
       ]

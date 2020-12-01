@@ -10,12 +10,12 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 			properties: ['notify'],
 			descriptors: [
 				new Bleno.Descriptor({
-					uuid: '2901',
+					uuid: '2905',
 					value: 'Indoor Bike Data'
 				}),
 				new Bleno.Descriptor({
 					// Client Characteristic Configuration
-					uuid: '2902',
+					uuid: '2906',
 					value: Buffer.alloc(2)
 				})
 			]
