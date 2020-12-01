@@ -8,7 +8,7 @@ class StaticReadCharacteristic extends Bleno.Characteristic {
 			value: null,
 			descriptors: [
 				new Bleno.Descriptor({
-					uuid: '2904',
+					uuid: '2901',
 					value: description
 				})
 			]
