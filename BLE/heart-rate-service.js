@@ -16,6 +16,8 @@ class HeartRateService extends Bleno.PrimaryService {
           //new StaticReadCharacteristic('2A5D', 'Sensor Location', [13])         // 13 = rear hub
         ]
     });
+    //PS: adding this below
+    console.log('starting HeartRateServise')
 
     this.heartMeasurement = heartMeasurement;
   }
