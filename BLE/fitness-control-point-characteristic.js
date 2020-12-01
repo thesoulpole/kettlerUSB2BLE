@@ -47,6 +47,10 @@ class FitnessControlPoint extends Bleno.Characteristic {
 			properties: ['write'],
 			descriptors: [
 				new Bleno.Descriptor({
+					uuid: '2901',
+					value: 'Fitness CONTROL Point'
+				}),
+				new Bleno.Descriptor({
 					// Client Characteristic Configuration
 					uuid: '2902',
 					value: Buffer.alloc(2)
