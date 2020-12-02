@@ -18,7 +18,7 @@ class CyclingPowerService extends Bleno.PrimaryService {
         ]
     });
     //PS: adding this below
-    console.log('starting CyclingPowerServise')
+    console.log('starting CyclingPowerServise');
 
     this.powerMeasurement = powerMeasurement;
   }
