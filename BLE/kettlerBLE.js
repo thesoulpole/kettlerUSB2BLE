@@ -26,7 +26,7 @@ class KettlerBLE extends EventEmitter {
 
 			if (state === 'poweredOn') {
 				bleno.startAdvertising(self.name, [self.csp.uuid, self.hrs.uuid,
-				, self.ftms.uuid
+				self.ftms.uuid
 				]);
 			} else {
 				console.log('Stopping...');
@@ -39,8 +39,8 @@ class KettlerBLE extends EventEmitter {
 			self.emit('advertisingStart', error);
 
 			if (!error) {
-				bleno.setServices([self.csp, self.hrs
-				, self.ftms
+				bleno.setServices([self.csp, self.hrs, 
+				self.ftms
 				], 
 				(error) => {
 					console.log(`[${this.name} setServices] ${(error ? 'error ' + error : 'success')}`);
