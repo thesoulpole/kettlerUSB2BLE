@@ -23,7 +23,7 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
           uuid: '2902',
           value: Buffer.alloc(2)
         }),
-        /* PS: still need to verify what descriptors are in fact needed for thsi Characteristic/service
+        /* PS: still need to verify what descriptors are in fact needed for this Characteristic/service
         new Bleno.Descriptor({
           // Server Characteristic Configuration
           uuid: '2903',
@@ -55,7 +55,8 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
   
     if (this._updateValueCallback) {
 		if (DEBUG) console.log("[heartRateService] Notify");
-		var buffer = new Buffer(8); //check the size of buffer neede for HRM
+    /*
+    var buffer = new Buffer(8); //check the size of buffer neede for HRM
 		// flags PS: check what the Flags are for HRM 
 		// 00000001 - 1   - 0x001 - Pedal Power Balance Present
 		// 00000010 - 2   - 0x002 - Pedal Power Balance Reference
@@ -76,6 +77,7 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
 	  
       this._updateValueCallback(buffer);
     }
+    */
     return this.RESULT_SUCCESS;
   }
   
