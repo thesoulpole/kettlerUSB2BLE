@@ -190,12 +190,13 @@ function serverCallback(message, ...args) {
 /**** TEST ***/
 
 setInterval(mafonction, 2000);
-setInterval(mafonction2, 4000);
+//setInterval(mafonction2, 4000);
 //oled.setStatus(1);
-
+/*
 bikeState.on('simpower', (simpower) => {
 	dataFake.power = simpower;
 });
+*/
 var dataFake = {
 	rpm: 80, //+ 20 * (Math.random() - 0.5),
 	speed: 20,
