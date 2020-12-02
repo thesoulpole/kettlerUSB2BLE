@@ -56,7 +56,7 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
     if (this._updateValueCallback) {
 		if (DEBUG) console.log("[heartRateService] Notify");
     
-    var buffer = Buffer.alloc(3); //check the size of buffer neede for HRM
+    var buffer = Buffer.alloc(2); //check the size of buffer neede for HRM
 		// flags PS: check what the Flags are for HRM 
 		// 00000001 - 1   - 0x001 - HRM value format - 0 is 1 byte, 1 is 2 bytes
 		// 00000010 - 2   - 0x002 - Contact bad => 1 (if bit 2 is 1), ) if its OK
@@ -72,7 +72,7 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
 		if ('hr' in event) {
 		  var heartR = event.hr;
 		  if (DEBUG) console.log("[heartRateService] HR: " + heartR);
-		  buffer.writeInt16LE(heartR, 1); // PS: is this offset right? (depends of size of the Flags field!)
+		  buffer.writeUInt8(heartR, 1); // PS: is this offset right? (depends of size of the Flags field!)
 		}
 	  
       this._updateValueCallback(buffer);
