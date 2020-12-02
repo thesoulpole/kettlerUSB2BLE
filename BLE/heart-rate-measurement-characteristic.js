@@ -19,13 +19,13 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
 				}),
         //  check if/what of this is needed!!!
         new Bleno.Descriptor({
-          // Client Characteristic Configuration
+          // Client Characteristic Configuration PS: its manadatory
           uuid: '2902',
           value: Buffer.alloc(2)
         }),
         /* PS: still need to verify what descriptors are in fact needed for this Characteristic/service
         new Bleno.Descriptor({
-          // Server Characteristic Configuration
+          // Server Characteristic Configuration PS: this is NOT mentioned in the HRS spec. So I'm cutting it... 
           uuid: '2903',
           value: Buffer.alloc(2)
         })
@@ -55,28 +55,28 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
   
     if (this._updateValueCallback) {
 		if (DEBUG) console.log("[heartRateService] Notify");
-    /*
-    var buffer = new Buffer(8); //check the size of buffer neede for HRM
+    
+    var buffer = Buffer.alloc(3); //check the size of buffer neede for HRM
 		// flags PS: check what the Flags are for HRM 
-		// 00000001 - 1   - 0x001 - Pedal Power Balance Present
-		// 00000010 - 2   - 0x002 - Pedal Power Balance Reference
-		// 00000100 - 4   - 0x004 - Accumulated Torque Present
-		// 00001000 - 8   - 0x008 - Accumulated Torque Source
-		// 00010000 - 16  - 0x010 - Wheel Revolution Data Present
-		// 00100000 - 32  - 0x020 - Crank Revolution Data Present
-		// 01000000 - 64  - 0x040 - Extreme Force Magnitudes Present
-		// 10000000 - 128 - 0x080 - Extreme Torque Magnitudes Present
+		// 00000001 - 1   - 0x001 - HRM value format - 0 is 1 byte, 1 is 2 bytes
+		// 00000010 - 2   - 0x002 - Contact bad => 1 (if bit 2 is 1), ) if its OK
+		// 00000100 - 4   - 0x004 - Contact Sensor present if 1, not if 0
+		// 00001000 - 8   - 0x008 - expanded energy present - if 1
+		// 00010000 - 16  - 0x010 - RR data present if 1 (thought the SIG spec idiotically forgot to specify WHICH bit that should be!!)
+		// 00100000 - 32  - 0x020 - reserved for futire use
+		// 01000000 - 64  - 0x040 - reserved for futire use
+		// 10000000 - 128 - 0x080 - reserved for futire use
 	   
-		buffer.writeUInt16LE(0x0000, 0); //PS: still need to check and set the Flags appropriate to HRM, also length/size of this field
+		buffer.writeUInt8(0x00, 0); //PS: still need to check and set the Flags appropriate to HRM, also length/size of this field
 	   
 		if ('hr' in event) {
 		  var heartR = event.hr;
 		  if (DEBUG) console.log("[heartRateService] HR: " + heartR);
-		  buffer.writeInt16LE(heartR, 2); // PS: is this offset right? (depends of size of the Flags field!)
+		  buffer.writeInt16LE(heartR, 1); // PS: is this offset right? (depends of size of the Flags field!)
 		}
 	  
       this._updateValueCallback(buffer);
-    */
+    
     }
     
     return this.RESULT_SUCCESS;
