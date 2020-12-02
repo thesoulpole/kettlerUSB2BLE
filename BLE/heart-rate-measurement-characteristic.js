@@ -76,8 +76,9 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
 		}
 	  
       this._updateValueCallback(buffer);
-    }
     */
+    }
+    
     return this.RESULT_SUCCESS;
   }
   
