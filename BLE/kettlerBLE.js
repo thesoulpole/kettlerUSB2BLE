@@ -14,7 +14,7 @@ class KettlerBLE extends EventEmitter {
 
 		this.csp = new CyclingPowerService();
 		this.hrs = new HeartRateService();
-		//this.ftms = new FitnessMachineService(serverCallback); 
+		this.ftms = new FitnessMachineService(serverCallback); 
 
 		let self = this;
 		console.log(`[${this.name} starting]`);
@@ -28,7 +28,7 @@ class KettlerBLE extends EventEmitter {
 				bleno.startAdvertising(self.name, [
 					self.csp.uuid 
 					,self.hrs.uuid
-					//,self.ftms.uuid
+					,self.ftms.uuid
 				]);
 			} else {
 				console.log('Stopping...');
@@ -44,7 +44,7 @@ class KettlerBLE extends EventEmitter {
 				bleno.setServices([
 					self.csp 
 					,self.hrs 
-					//,self.ftms
+					,self.ftms
 				], 
 				(error) => {
 					console.log(`[${this.name} setServices] ${(error ? 'error ' + error : 'success')}`);
@@ -82,7 +82,7 @@ class KettlerBLE extends EventEmitter {
 	notifyFTMS(event) {
 		this.csp.notify(event);
 		this.hrs.notify(event);
-		//this.ftms.notify(event);
+		this.ftms.notify(event);
 	};
 	
  
