@@ -24,6 +24,8 @@ class FitnessMachineService extends Bleno.PrimaryService {
 					new StaticReadCharacteristic('2AD8', 'SupportedPowerRange', [0x32, 0x00, 0x58, 0x02, 0x05, 0x00]), // SupportedPowerRange (50 - 600 with 5watts step)
 				]
 			});
+		//PS: adding this console.log below
+		console.log('starting FTMS_Servise');
 
 		this.indoorBikeData = indoorBikeData;
 	}

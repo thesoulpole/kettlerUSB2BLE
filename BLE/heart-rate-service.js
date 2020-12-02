@@ -11,13 +11,13 @@ class HeartRateService extends Bleno.PrimaryService {
     super({
         uuid: '180D',
         characteristics: [
-          heartMeasurement,
+          heartMeasurement
           //new StaticReadCharacteristic('2A65', 'Cycling Power Feature', [0x08, 0, 0, 0]), // 0x08 - crank revolutions
           //new StaticReadCharacteristic('2A5D', 'Sensor Location', [13])         // 13 = rear hub
         ]
     });
     //PS: adding this console.log below
-    console.log('starting HeartRateServise')
+    console.log('starting HeartRateServise');
 
     this.heartMeasurement = heartMeasurement;
   }
