@@ -22,7 +22,7 @@ class HeartRateMeasurementCharacteristic extends  Bleno.Characteristic {
           // Client Characteristic Configuration PS: its manadatory
           uuid: '2902',
           value: Buffer.alloc(2)
-        }),
+        })
         /* PS: still need to verify what descriptors are in fact needed for this Characteristic/service
         new Bleno.Descriptor({
           // Server Characteristic Configuration PS: this is NOT mentioned in the HRS spec. So I'm cutting it... 
