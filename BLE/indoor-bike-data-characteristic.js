@@ -36,7 +36,7 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 	};
 
 	notify(event) {
-		if (!('cadence' in event)) //&& !('hr' in event)) 
+		if (!('cadence' in event) && !('power' in event)) 
 		{
 			// ignore events with no power and no hr data -> ignore those with no CADENCE
 			return this.RESULT_SUCCESS; 
@@ -44,10 +44,10 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 
 		if (this._updateValueCallback) {
 			if (DEBUG) console.log("[IndoorBikeDataCharacteristic] Notify");
-			var buffer = Buffer.alloc(4);
+			var buffer = Buffer.alloc(6);
 			// speed + power + heart rate //PS: i.e. this is setting these flags
 			//PS: I changed this to falg only instantanious Cadence
-			buffer.writeUInt8(0x04, 0);
+			buffer.writeUInt8(0x45, 0);
 			buffer.writeUInt8(0x00, 1);
 
 			var index = 2;
@@ -65,14 +65,14 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 				index += 2;
 			}
 			
-			/*if ('power' in event) {
+			if ('power' in event) {
 				var power = event.power;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] power: " + power);
 				buffer.writeInt16LE(power, index);
 				index += 2;
 			}
 
-			if ('hr' in event) {
+			/*if ('hr' in event) {
 				var hr = event.hr;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] hr : " + hr);
 				buffer.writeUInt16LE(hr, index);
