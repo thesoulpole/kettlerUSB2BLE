@@ -28,7 +28,7 @@ app.set('view engine', 'ejs');
 app.get('/', function (req, res) {
 	res.render('index');
 });
-app.get('/views', function (req, res) { //not finished, intention to manually set data in dataFake
+app.get('/views', function (req, res) { //PS: this - in particular control.ejs - is not finished, my intention - to manually set the data in dataFake
 		res.render('control');
 });
 server = app.listen(3000, function () {
