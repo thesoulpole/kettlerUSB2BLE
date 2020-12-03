@@ -54,7 +54,7 @@ class FitnessControlPoint extends Bleno.Characteristic {
 					// Client Characteristic Configuration
 					uuid: '2902',
 					value: Buffer.alloc(2)
-				}),
+				}),//PS: I added this 2903 to try to get Rouvy to see this - but no success
 				new Bleno.Descriptor({
 				  // Server Characteristic Configuration
 				  uuid: '2903',
