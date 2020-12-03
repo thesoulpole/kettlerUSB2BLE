@@ -2,7 +2,7 @@ const bleno = require('@abandonware/bleno');
 const EventEmitter = require('events');
 const CyclingPowerService = require('./cycling-power-service');
 const HeartRateService = require('./heart-rate-service');
-const SpeedCadenceService = require('./speed-cadence-service');
+//const SpeedCadenceService = require('./speed-cadence-service');
 const FitnessMachineService = require('./ftms-service');
 
 class KettlerBLE extends EventEmitter {
