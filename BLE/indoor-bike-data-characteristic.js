@@ -38,7 +38,7 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 	notify(event) {
 		if (!('cadence' in event) && !('power' in event)) 
 		{
-			// ignore events with no power and no hr data -> ignore those with no CADENCE
+			// ignore events with no power and no cadence data -> ignore those with no CADENCE
 			return this.RESULT_SUCCESS; 
 		}
 

@@ -13,7 +13,7 @@ class KettlerBLE extends EventEmitter {
 		this.name = "KettlerBLE";
 		process.env['BLENO_DEVICE_NAME'] = this.name; 
 
-		this.csp = new CyclingPowerService();
+		//this.csp = new CyclingPowerService();
 		this.hrs = new HeartRateService();
 		//this.spc = new SpeedCadenceService();
 		this.ftms = new FitnessMachineService(serverCallback); 
@@ -28,8 +28,8 @@ class KettlerBLE extends EventEmitter {
 
 			if (state === 'poweredOn') {
 				bleno.startAdvertising(self.name, [
-					self.csp.uuid 
-					,self.hrs.uuid
+					//self.csp.uuid 
+					self.hrs.uuid
 					//,self.spc.uuid
 					,self.ftms.uuid
 				]);
@@ -45,8 +45,8 @@ class KettlerBLE extends EventEmitter {
 
 			if (!error) {
 				bleno.setServices([
-					self.csp 
-					,self.hrs
+					//self.csp 
+					self.hrs
 					//,self.spc 
 					,self.ftms
 				], 
@@ -84,7 +84,7 @@ class KettlerBLE extends EventEmitter {
 
 	// notifiy BLE services
 	notifyFTMS(event) {
-		this.csp.notify(event);
+		//this.csp.notify(event);
 		this.hrs.notify(event);
 		//this.spc.notify(event);
 		this.ftms.notify(event);
