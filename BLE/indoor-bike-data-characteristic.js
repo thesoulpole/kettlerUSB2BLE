@@ -61,7 +61,7 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 			if ('cadence' in event) { //BUT THE FLAG IS NOT SET above!! Now its set! And - I chng "rpm" to "cadence"
 				var cadence = event.cadence;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] rpm: " + cadence);
-				buffer.writeInt16LE(rpm * 2, index);
+				buffer.writeInt16LE(cadence, index);
 				index += 2;
 			}
 			
