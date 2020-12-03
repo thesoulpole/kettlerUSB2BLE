@@ -1,7 +1,7 @@
 const Bleno = require('@abandonware/bleno');
 
 const HeartRateMeasurementCharacteristic = require('./heart-rate-measurement-characteristic');
-const StaticReadCharacteristic = require('./static-read-characteristic');
+//const StaticReadCharacteristic = require('./static-read-characteristic');
 
 // https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.cycling_power.xml
 class HeartRateService extends Bleno.PrimaryService {

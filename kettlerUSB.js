@@ -99,8 +99,9 @@ class kettlerUSB extends EventEmitter {
 			}
 
 			// rpm
-			// ---- this is a DUPLICTAE of the CADENCE section!! BUT - we are setting a 
-			// ---- new, (REDUNDANT!) field in dataOut (called 'rpm') !!
+			// ---- right now, this is a DUPLICTAE of the CADENCE section!! BUT - we are I should CREATE  
+			// ---- a new, value for this field in dataOut (called 'rpm') for te RPMs on the rear Axle. 
+			// ---- With the GEARS being used!!
 			var rpm = parseInt(states[1]);
 			if (!isNaN(rpm)) {
 				dataOut.rpm = rpm;

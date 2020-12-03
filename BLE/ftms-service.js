@@ -17,11 +17,14 @@ class FitnessMachineService extends Bleno.PrimaryService {
 			super({
 				uuid: '1826',
 				characteristics: [
-					new StaticReadCharacteristic('2ACC', 'Fitness Machine Feature', [0x02, 0x44, 0x00, 0x00, 0x08, 0x20, 0x00, 0x00]), // Feature Characteristics
+					new StaticReadCharacteristic('2ACC', 'Fitness Machine Feature', [0x02, 0x00, 0x00, 0x00, 0x08, 0x20, 0x00, 0x00]), // FM Features AND Target Setting Features Characteristics
+					//PS: bit 13 for Indoor Bike Simulation Parameters Supported is set! DON'T know if this is sensible/correct
 					controlPoint,
 					indoorBikeData,
 					fitnessMachineStatus,
-					new StaticReadCharacteristic('2AD8', 'SupportedPowerRange', [0x32, 0x00, 0x58, 0x02, 0x05, 0x00]), // SupportedPowerRange (50 - 600 with 5watts step)
+					new StaticReadCharacteristic('2AD8', 'SupportedPowerRange', [0x32, 0x00, 0x58, 0x02, 0x05, 0x00]) // SupportedPowerRange (50 - 600 with 5watts step)
+					// SIG does NOT give info HOW to encode the Supported Power Range. (This is insane!!!)
+					//HOWEVER - I am NOT setting Power Target Setting Supported, so this is optional anyway..
 				]
 			});
 		//PS: adding this console.log below

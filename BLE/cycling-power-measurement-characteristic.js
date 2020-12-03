@@ -73,7 +73,7 @@ class CyclingPowerMeasurementCharacteristic extends  Bleno.Characteristic {
 	  
 		if ('rpm' in event) {
 		  var rpm = event.rpm;
-		  if (DEBUG) console.log("[powerService] rpm: " + event.rpm);
+		  if (DEBUG) console.log("[powerService] rpm: " + rpm);
 		  buffer.writeUInt16LE(rpm, 4);
 		}
       this._updateValueCallback(buffer);

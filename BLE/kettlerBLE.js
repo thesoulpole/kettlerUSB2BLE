@@ -2,6 +2,7 @@ const bleno = require('@abandonware/bleno');
 const EventEmitter = require('events');
 const CyclingPowerService = require('./cycling-power-service');
 const HeartRateService = require('./heart-rate-service');
+const SpeedCadenceService = require('./speed-cadence-service');
 const FitnessMachineService = require('./ftms-service');
 
 class KettlerBLE extends EventEmitter {
@@ -14,6 +15,7 @@ class KettlerBLE extends EventEmitter {
 
 		this.csp = new CyclingPowerService();
 		this.hrs = new HeartRateService();
+		//this.spc = new SpeedCadenceService();
 		this.ftms = new FitnessMachineService(serverCallback); 
 
 		let self = this;
@@ -28,6 +30,7 @@ class KettlerBLE extends EventEmitter {
 				bleno.startAdvertising(self.name, [
 					self.csp.uuid 
 					,self.hrs.uuid
+					//,self.spc.uuid
 					,self.ftms.uuid
 				]);
 			} else {
@@ -43,7 +46,8 @@ class KettlerBLE extends EventEmitter {
 			if (!error) {
 				bleno.setServices([
 					self.csp 
-					,self.hrs 
+					,self.hrs
+					//,self.spc 
 					,self.ftms
 				], 
 				(error) => {
@@ -82,6 +86,7 @@ class KettlerBLE extends EventEmitter {
 	notifyFTMS(event) {
 		this.csp.notify(event);
 		this.hrs.notify(event);
+		//this.spc.notify(event);
 		this.ftms.notify(event);
 	};
 	
