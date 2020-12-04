@@ -132,7 +132,7 @@ class kettlerUSB extends EventEmitter {
 		this.emit('connecting');
 		// create and open a Serial port
 		this.port = new SerialPort(portName, {
-				baudRate: 57600,
+				baudRate: 9600,
 				autoOpen: false
 			});
 		this.parser = this.port.pipe(new Readline({
