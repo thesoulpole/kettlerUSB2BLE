@@ -59,7 +59,7 @@ class FitnessMachineStatusCharacteristic extends Bleno.Characteristic {
 
   notify (event) {
     if (DEBUG) console.log('[fitness-machine-status-characteristic.js] - notify')
-    var buffer = new Buffer.from(2)  //PS: WTF?? should be Buffer.alloc(1). This typecasts 2 to a string, 
+    var buffer = Buffer.alloc(1)  //PS: WTF?? should be Buffer.alloc(1). This typecasts 2 to a string, 
                                      //and creates/allocates a 1 byte buffer variable. But WHY this way??
     // speed + power + heart rate    //PS: this comment is wrong. It's probably from the indoor-bike-characteristic.
     buffer.writeUInt8(StatusOpCode.startedResumedUser, 0)
