@@ -52,6 +52,7 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 
 			var index = 2;
 			/*if ('speed' in event) {
+				// WHY is speed being multiplied by 10??
 				var speed = parseInt(event.speed * 100);
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] speed: " + speed);
 				buffer.writeInt16LE(speed, index);
@@ -61,7 +62,9 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 			if ('cadence' in event) { //BUT THE FLAG IS NOT SET above!! Now its set! And - I chng "rpm" to "cadence"
 				var cadence = event.cadence;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] rpm: " + cadence);
-				buffer.writeInt16LE(cadence, index);
+				//WHY is cadence multiplied by 2 ??! if it is NOT, in RGT Cycling it appears 
+				// as HALF of the value displayed by Kettler. So this multiplication IS necessary! MADNESS...
+				buffer.writeInt16LE(cadence*2, index);
 				index += 2;
 			}
 			
