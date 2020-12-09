@@ -14,7 +14,7 @@ class KettlerBLE extends EventEmitter {
 		process.env['BLENO_DEVICE_NAME'] = this.name; 
 
 		this.csp = new CyclingPowerService();
-		//this.hrs = new HeartRateService();
+		//this.hrs = new HeartRateService(); //juets a dummy comment...
 		//this.spc = new SpeedCadenceService();
 		this.ftms = new FitnessMachineService(serverCallback); 
 

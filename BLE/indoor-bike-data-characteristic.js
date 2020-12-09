@@ -1,5 +1,5 @@
 var Bleno = require('@abandonware/bleno');
-var DEBUG = false; //PS: I changed this to true, to see what data is reaching this point
+var DEBUG = false;
 
 class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 
@@ -72,7 +72,7 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 				index += 2;
 			}
 
-			if ('hr' in event) {
+			if ('hr' in event) { //dummy coment
 				var hr = event.hr;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] hr : " + hr);
 				buffer.writeUInt16LE(hr, index);
