@@ -44,21 +44,21 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 
 		if (this._updateValueCallback) {
 			if (DEBUG) console.log("[IndoorBikeDataCharacteristic] Notify");
-			var buffer = Buffer.alloc(8);
-			// speed + power + heart rate //PS: i.e. this is setting these flags
-			//PS: I changed this to falg only instantanious Cadence
-			buffer.writeUInt8(0x45, 0);
-			buffer.writeUInt8(0x02, 1);
+			var buffer = Buffer.alloc(8); //PS: 10->8 bytes, in accordance with HR commented out below 
+			// speed + power + heart rate 
+			buffer.writeUInt8(0x44, 0); //PS:flags now reflect just speed, power and cadence passed to client (eg. Zwift)
+			buffer.writeUInt8(0x00, 1); //PS: flag byte change form 02 to 00 to reflect no HR
 
 			var index = 2;
-			/*if ('speed' in event) {
+			if ('speed' in event) { //PS: since Z calculates speed from Power, this would seem unnecessary, 
+									// but maybe othe r clients use it...
 				var speed = parseInt(event.speed * 100);
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] speed: " + speed);
 				buffer.writeInt16LE(speed, index);
 				index += 2;
-			}*/
+			}
 			
-			if ('cadence' in event) { //BUT THE FLAG IS NOT SET above!! -> Now its set! And - I chng "rpm" to "cadence"
+			if ('cadence' in event) { //PS: changed "rpm" to "cadence"
 				var cadence = event.cadence;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] cadence: " + cadence);
 				buffer.writeInt16LE(cadence*2, index);
@@ -72,12 +72,12 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 				index += 2;
 			}
 
-			if ('hr' in event) { //dummy coment
+			/*if ('hr' in event) { //PS: removin this, since clearly Zwift takes the HR only from a HR Service
 				var hr = event.hr;
 				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] hr : " + hr);
 				buffer.writeUInt16LE(hr, index);
 				index += 2;
-			}
+			}*/
 			this._updateValueCallback(buffer);
 		}
 		else
