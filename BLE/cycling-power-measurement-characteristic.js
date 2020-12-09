@@ -1,6 +1,6 @@
 
 var Bleno = require('@abandonware/bleno');
-var DEBUG = false; //PS:chged to true 
+var DEBUG = false; 
 
 // Spec
 //https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.cycling_power_measurement.xml
@@ -52,7 +52,7 @@ class CyclingPowerMeasurementCharacteristic extends  Bleno.Characteristic {
   
     if (this._updateValueCallback) {
 		if (DEBUG) console.log("[powerService] Notify");
-		var buffer = Buffer.alloc(8);
+		var buffer = Buffer.alloc(4); //PS:change the size of the buffer form 8 to 4, due to commenting out the rpm writing
 		// flags
 		// 00000001 - 1   - 0x001 - Pedal Power Balance Present
 		// 00000010 - 2   - 0x002 - Pedal Power Balance Reference
@@ -70,12 +70,16 @@ class CyclingPowerMeasurementCharacteristic extends  Bleno.Characteristic {
 		  if (DEBUG) console.log("[powerService] power: " + power);
 		  buffer.writeInt16LE(power, 2);
 		}
-	  
+    
+    /* 
+    //the RPMs are not defined this way in the specification. according to the spec, 
+    //only a Crank Revolution Data field pair is specified, = "Cumulative Crank Revolutions and Last Crank Event Time fields"
 		if ('rpm' in event) {
 		  var rpm = event.rpm;
 		  if (DEBUG) console.log("[powerService] rpm: " + rpm);
 		  buffer.writeUInt16LE(rpm, 4);
-		}
+    }
+    */
       this._updateValueCallback(buffer);
     }
     return this.RESULT_SUCCESS;

@@ -28,9 +28,10 @@ app.set('view engine', 'ejs');
 app.get('/', function (req, res) {
 	res.render('index');
 });
-app.get('/views', function (req, res) { //PS: this - in particular control.ejs - is not finished, my intention - to manually set the data in dataFake
+/*app.get('/views', function (req, res) { //PS: this - in particular control.ejs - is not finished, my intention was to manually set the data in dataFake
+										  // probably not needed any more...
 		res.render('control');
-});
+});*/
 server = app.listen(3000, function () {
 		console.log('Kettler app listening on port 3000!');
 	});
@@ -57,7 +58,7 @@ io.on('connection', (socket) => {
 		}
 	});
 	// console.log('browser connecting to web server');
-	// socket.emit('key', 'GearDn'); //PS: this should force the display of a initial gear, but doesn't. Why?
+	// socket.emit('key', 'GearDn'); //PS: this should force the display of an initial gear, but doesn't. Why?
 });
 
 //--- Buttons
