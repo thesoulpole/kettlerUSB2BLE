@@ -59,9 +59,9 @@ class IndoorBikeDataCharacteristic extends Bleno.Characteristic {
 				index += 2;
 			}*/
 			
-			if ('cadence' in event) { //BUT THE FLAG IS NOT SET above!! Now its set! And - I chng "rpm" to "cadence"
+			if ('cadence' in event) { //BUT THE FLAG IS NOT SET above!! -> Now its set! And - I chng "rpm" to "cadence"
 				var cadence = event.cadence;
-				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] rpm: " + cadence);
+				if (DEBUG) console.log("[IndoorBikeDataCharacteristic] cadence: " + cadence);
 				//WHY is cadence multiplied by 2 ??! if it is NOT, in RGT Cycling it appears 
 				// as HALF of the value displayed by Kettler. So this multiplication IS necessary! MADNESS...
 				buffer.writeInt16LE(cadence*2, index);
